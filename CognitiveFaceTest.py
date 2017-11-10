@@ -13,7 +13,7 @@ img_url={'url':'http://www.billboard.com/files/media/Taylor-Swift-oct-22-2016-bi
 # The next few lines is just building the url for the POST request. So you'll have headers and other parameters (params)
 
 # This dictionary contains the headers. So, you'll have the key right here.
-headers={'Content-Type':'application/octet-stream','Ocp-Apim-Subscription-Key':'485516d983c14a36a8dd8eead1f710d2'}
+headers={'Content-Type':'application/octet-stream','Ocp-Apim-Subscription-Key':'<your key here>'}
 
 # Here's the base url you need to use.
 # So, you send a POST request to the westcentral Azure server, and then call Face v1.0 API's 'detect' method on the image whose url you've specified.
