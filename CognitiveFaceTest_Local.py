@@ -2,10 +2,6 @@
 import requests
 import json
 
-# This will be the url of the image you need to test. Change it to your will.
-# Commented out the next line to work out local image file usage.
-# img_url={'url':'emma.jpg'}
-
 # This line creates a binary stream out of the image specified.
 # The image that you've specified should ideally be in the same folder as the script itself.
 # Or, you could specify the path in the filename string below.
@@ -21,7 +17,7 @@ imgstream.close()
 
 # This dictionary contains the headers. So, you'll have the key right here.
 # Also, since the type of content you're sending is not a URL but a binary stream, the 'Content-Type' key also needs to be set to 'octet-stream'
-headers={'Content-Type':'application/octet-stream','Ocp-Apim-Subscription-Key':'485516d983c14a36a8dd8eead1f710d2'}
+headers={'Content-Type':'application/octet-stream','Ocp-Apim-Subscription-Key':'<your key here>'}
 
 # Here's the base url you need to use.
 # So, you send a POST request to the westcentral Azure server, and then call Face v1.0 API's 'detect' method on the image whose url you've specified.
@@ -37,4 +33,5 @@ params = {'returnFaceId': 'false','returnFaceLandmarks': 'false','returnFaceAttr
 # P.P.S - Since you're sending binary data instead of a URL, you need to specify the binary data variable in the 'data' parameter, and leave out the 'json' parameter.
 response=requests.request('POST',base_url,headers=headers,params=params,data=IMG)
 
+# Now, just print out the JSON. (Or do more with it, if you want.)
 print(json.loads(response.text))
