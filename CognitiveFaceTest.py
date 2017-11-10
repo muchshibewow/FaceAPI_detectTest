@@ -5,11 +5,6 @@ import json
 # This will be the url of the image you need to test. Change it to your will.
 img_url={'url':'http://www.billboard.com/files/media/Taylor-Swift-oct-22-2016-billboard-1548.jpg'}
 
-# THe next lines are for local image usage (COMMENTED OUT).
-# imgstream=open('emma.jpg','rb')
-# body=imgstream.read()
-# imgstream.close()
-
 # The next few lines is just building the url for the POST request. So you'll have headers and other parameters (params)
 
 # This dictionary contains the headers. So, you'll have the key right here.
@@ -28,4 +23,5 @@ params = {'returnFaceId': 'false','returnFaceLandmarks': 'false','returnFaceAttr
 # P.S - Microsoft wants that you send the image url as part of a JSON object, hence the 'json' parameter.
 response=requests.request('POST',base_url,headers=headers,params=params,data=None,json=img_url)
 
+# Now, just print out the JSON. (Or, do something with this if you want.)
 print(json.loads(response.text))
