@@ -7,3 +7,7 @@ method of obtaining results.
 
 Note : In order to use these scripts for your own uses, you'll need to either edit the URL/image path in the program, or create
        an input sequence in the program, which I'm too lazy to write.
+       Also, you need to specify your own key for using this service from Microsoft.
+       Get one here: https://azure.microsoft.com/en-in/try/cognitive-services/?api=face-api
+       (You might need to create a free Azure account, following which you can get free trials for most
+       APIs offered by Microsoft Azure.)
